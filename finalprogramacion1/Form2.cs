@@ -20,9 +20,10 @@ namespace finalprogramacion1
             InitializeComponent();
             this.index = index;
             this.grdClase = grdClase;
-            this.nombre = nombre;
-            this.profesor = profesor;
-            this.materia = materia;
+
+            txtAlumno2.text = nombre;
+            txtProfesor2.text = profesor;
+            txtMateria2.text = materia;
         }
 
         private void btnCerrar2_Click(object sender, EventArgs e)
