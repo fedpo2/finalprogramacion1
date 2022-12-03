@@ -12,19 +12,26 @@ namespace finalprogramacion1
 {
     public partial class Form2 : Form
     {
-        public Form2()
+     private static int index;
+     private static dataFridView grdClase;
+        public Form2(int index, ref dataGridView grdClase)
         {
             InitializeComponent();
+            this.index = index;
+            this.grdClase = grdClase;
         }
 
         private void btnCerrar2_Click(object sender, EventArgs e)
         {
-
+          this.Close();
         }
 
         private void btnModif2_Click(object sender, EventArgs e)
         {
 
+          grdClase.Rows[index].Cell[1].Value = txtAlumno2.text;
+          grdClase.Rows[index].Cell[2].Value = txtProfesor2.text;
+          grdClase.Rows[index].Cell[3].Value = txtMateria2.text;
         }
     }
 }
