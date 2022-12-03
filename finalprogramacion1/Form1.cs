@@ -18,18 +18,23 @@ namespace finalprogramacion1
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-          this.Close(); 
+          Application.Exit();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+          txtAlumno.text = "";
+          txtMateria.text = "";
+          txtProfesor.text = "";
+          txtIndexMod.text = "";
+          txtIndexBaja.text = "";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
           int index = Convert.toInt32(txtIndexMod.text);
-          
+          Form2 frmModif = new Form2(index, txtAlumno.text, txtProfesor.text, txtMateria.text);
+          frmModif.show();
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -39,9 +44,10 @@ namespace finalprogramacion1
 
         private void nuevoAlumno(string nombre, string profesor, string materia){
         int linea = grdClase.Rows.Add(); contadorIndex++;
-        grdClase[linea].Cell[1] = nombre;
-        grdClase[linea].Cell[2] = profesor;
-        grdClase[linea].Cell[3] = materia;
+        grdClase.Rows[linea].Cell[0].Value = Convert.toString(linea);
+        grdClase.Rows[linea].Cell[1].Value = nombre;
+        grdClase.Rows[linea].Cell[2].Value = profesor;
+        grdClase.Rows[linea].Cell[3].Value = materia;
         }
     }
 }
