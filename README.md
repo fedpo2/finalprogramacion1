@@ -1,8 +1,10 @@
 # finalprogramacion1
+
 Integrantes:
+   
     Federico polidoro
 
-Condigna:
+Consigna:
 
     Programación I / Pág.1
     PROGRAMACION I
