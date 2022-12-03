@@ -33,7 +33,7 @@ namespace finalprogramacion1
         private void btnModificar_Click(object sender, EventArgs e)
         {
           int index = Convert.toInt32(txtIndexMod.text);
-          Form2 frmModif = new Form2(index);
+          Form2 frmModif = new Form2(index, txtAlumno.text, txtProfesor.text, txtMateria.text);
           frmModif.show();
         }
 

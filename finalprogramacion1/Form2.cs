@@ -13,12 +13,16 @@ namespace finalprogramacion1
     public partial class Form2 : Form
     {
      private static int index;
+     private static string nombre, profesor, materia;
      private static dataFridView grdClase;
-        public Form2(int index, ref dataGridView grdClase)
+        public Form2(int index, ref dataGridView grdClase, string nombre, string profesor, string materia)
         {
             InitializeComponent();
             this.index = index;
             this.grdClase = grdClase;
+            this.nombre = nombre;
+            this.profesor = profesor;
+            this.materia = materia;
         }
 
         private void btnCerrar2_Click(object sender, EventArgs e)
