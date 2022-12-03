@@ -1,36 +1,40 @@
 # finalprogramacion1
+Integrantes:
+    Federico polidoro
 
-Programación I / Pág.1
-PROGRAMACION I
-Trabajo Práctico Final
+Condigna:
 
-Manejo de archivos de texto con Winforms
+    Programación I / Pág.1
+    PROGRAMACION I
+    Trabajo Práctico Final
 
-Este trabajo práctico se bas en la realización de una solucion programada en C#, con manejo
-de archivos de texto en un entorno de una aplicación .NET WinForm.
+    Manejo de archivos de texto con Winforms
 
-Se crearan 3 archivos: Alumnos, Profesores y Materias.
+    Este trabajo práctico se bas en la realización de una solucion programada en C#, con manejo
+    de archivos de texto en un entorno de una aplicación .NET WinForm.
 
-El manejo de los mismos será similar a lo realizado en el ejemplo de la unidad 4.
+    Se crearan 3 archivos: Alumnos, Profesores y Materias.
 
-Cada archivo tendrá los botones Alta, Baja y Modificaciones.
+    El manejo de los mismos será similar a lo realizado en el ejemplo de la unidad 4.
 
-Además un botón limpiar cajas de texto. Y salir del programa.
+    Cada archivo tendrá los botones Alta, Baja y Modificaciones.
 
-En base a los 3 archivos se crearán cursos, para lo cual se seguirá el siguiente orden:
+    Además un botón limpiar cajas de texto. Y salir del programa.
 
-Seleccionar la materia, luego el profesor. Los dos serán únicos.
+    En base a los 3 archivos se crearán cursos, para lo cual se seguirá el siguiente orden:
 
-Y por último, se podra ingresar alumnos todos los que se deseen.
+    Seleccionar la materia, luego el profesor. Los dos serán únicos.
 
-Mostrar Nombre Curso, Profesor, en Cajas de texto y en un datagridview la lista de alumnos
-pertenecientes al curso.
+    Y por último, se podra ingresar alumnos todos los que se deseen.
 
-Se da libertad de distribución de los componentes en el formulario o si se desea usar un menú
-de opciones.
+    Mostrar Nombre Curso, Profesor, en Cajas de texto y en un datagridview la lista de alumnos
+    pertenecientes al curso.
+    
+    Se da libertad de distribución de los componentes en el formulario o si se desea usar un menú
+    de opciones.
 
-La entrega será 72hs. antes de la mesa de exámen, y la evaluación será individual.
+    La entrega será 72hs. antes de la mesa de exámen, y la evaluación será individual.
+    
+    Enviar al mail: inguaipedrolopez@gmail.com
 
-Enviar al mail: inguaipedrolopez@gmail.com
-
-Recibirán un Ok si llego bien la solución.
+    Recibirán un Ok si llego bien la solución.
