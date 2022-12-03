@@ -10,11 +10,6 @@ namespace finalprogramacion1
 
         }
         
-
-        private void button1_Click(object sender, EventArgs e{} // si borro esta linea falla el programa porque en otro lado el boton de
-        // alta apunta a este evento aunque el boton ya no se llame botton1 :(
-
-
         private void btnAlta_Click(object sender, EventArgs e)
         {
 
@@ -23,6 +18,21 @@ namespace finalprogramacion1
         private void btnCerrar_Click(object sender, EventArgs e)
         {
           this.Close(); 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
