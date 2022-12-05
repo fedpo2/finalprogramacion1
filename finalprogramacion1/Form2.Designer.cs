@@ -34,7 +34,6 @@
             this.txtProfesor2 = new System.Windows.Forms.TextBox();
             this.txtMateria2 = new System.Windows.Forms.TextBox();
             this.txtAlumno2 = new System.Windows.Forms.TextBox();
-            this.btnModif2 = new System.Windows.Forms.Button();
             this.btnCerrar2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -86,19 +85,9 @@
             this.txtAlumno2.Size = new System.Drawing.Size(100, 23);
             this.txtAlumno2.TabIndex = 18;
             // 
-            // btnModif2
-            // 
-            this.btnModif2.Location = new System.Drawing.Point(19, 98);
-            this.btnModif2.Name = "btnModif2";
-            this.btnModif2.Size = new System.Drawing.Size(75, 23);
-            this.btnModif2.TabIndex = 17;
-            this.btnModif2.Text = "Modificar";
-            this.btnModif2.UseVisualStyleBackColor = true;
-            this.btnModif2.Click += new System.EventHandler(this.btnModif2_Click);
-            // 
             // btnCerrar2
             // 
-            this.btnCerrar2.Location = new System.Drawing.Point(213, 98);
+            this.btnCerrar2.Location = new System.Drawing.Point(116, 98);
             this.btnCerrar2.Name = "btnCerrar2";
             this.btnCerrar2.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar2.TabIndex = 24;
@@ -118,7 +107,6 @@
             this.Controls.Add(this.txtProfesor2);
             this.Controls.Add(this.txtMateria2);
             this.Controls.Add(this.txtAlumno2);
-            this.Controls.Add(this.btnModif2);
             this.Name = "Form2";
             this.Text = "Modificar";
             this.ResumeLayout(false);
@@ -131,10 +119,9 @@
         private Label lblMateria2;
         private Label lblAlumno2;
         private Label lblProfesor2;
-        private TextBox txtProfesor2;
-        private TextBox txtMateria2;
-        private TextBox txtAlumno2;
-        private Button btnModif2;
+        public TextBox txtProfesor2;
+        public TextBox txtMateria2;
+        public TextBox txtAlumno2;
         private Button btnCerrar2;
     }
 }

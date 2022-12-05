@@ -13,7 +13,7 @@ namespace finalprogramacion1
         
         private void btnAlta_Click(object sender, EventArgs e)
         {
-          nuevoAlumno(txtAlumno.text, txtProfesor.text, txtMateria.text); 
+          nuevoAlumno(txtAlumno.Text, txtProfesor.Text, txtMateria.Text); 
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -23,18 +23,21 @@ namespace finalprogramacion1
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-          txtAlumno.text = "";
-          txtMateria.text = "";
-          txtProfesor.text = "";
-          txtIndexMod.text = "";
-          txtIndexBaja.text = "";
+          txtAlumno.Text = "";
+          txtMateria.Text = "";
+          txtProfesor.Text = "";
+          txtIndexMod.Text = "";
+          txtIndexBaja.Text = "";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-          int index = Convert.toInt32(txtIndexMod.text);
-          Form2 frmModif = new Form2(index, grdClase, txtAlumno.text, txtProfesor.text, txtMateria.text);
-          frmModif.show();
+          int index = Convert.ToInt32(txtIndexMod.Text);
+          Form2 frmModif = new Form2(txtAlumno.Text, txtProfesor.Text, txtMateria.Text);
+          frmModif.Show();
+          grdClase.Rows[index].Cells[1].Value = frmModif.txtAlumno2.Text;
+          grdClase.Rows[index].Cells[2].Value = frmModif.txtProfesor2.Text;
+          grdClase.Rows[index].Cells[3].Value = frmModif.txtMateria2.Text;
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -44,10 +47,10 @@ namespace finalprogramacion1
 
         private void nuevoAlumno(string nombre, string profesor, string materia){
         int linea = grdClase.Rows.Add(); contadorIndex++;
-        grdClase.Rows[linea].Cell[0].Value = Convert.toString(linea);
-        grdClase.Rows[linea].Cell[1].Value = nombre;
-        grdClase.Rows[linea].Cell[2].Value = profesor;
-        grdClase.Rows[linea].Cell[3].Value = materia;
+        grdClase.Rows[linea].Cells[0].Value = Convert.ToString(linea);
+        grdClase.Rows[linea].Cells[1].Value = nombre;
+        grdClase.Rows[linea].Cells[2].Value = profesor;
+        grdClase.Rows[linea].Cells[3].Value = materia;
         }
     }
 }

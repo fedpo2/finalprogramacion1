@@ -13,30 +13,27 @@ namespace finalprogramacion1
     public partial class Form2 : Form
     {
      private static int index;
-     private static string nombre, profesor, materia;
-     private static dataFridView grdClase;
-        public Form2(int index, ref dataGridView grdClase, string nombre, string profesor, string materia)
+
+        public Form2(string nombre, string profesor, string materia)
         {
             InitializeComponent();
-            this.index = index;
-            this.grdClase = grdClase;
 
-            txtAlumno2.text = nombre;
-            txtProfesor2.text = profesor;
-            txtMateria2.text = materia;
+
+            txtAlumno2.Text = nombre;
+            txtProfesor2.Text = profesor;
+            txtMateria2.Text = materia;
         }
 
         private void btnCerrar2_Click(object sender, EventArgs e)
         {
-          this.Close();
+            string path = "./modificartmp";
+            string txt = txtAlumno2.Text + "|" + txtProfesor2.Text + "|" + txtMateria2.Text;
+            using (StreamWriter sw = new StreamWriter(path)) { 
+                sw.Write(txt);
+                sw.Close();
+            }
+            this.Close();
         }
 
-        private void btnModif2_Click(object sender, EventArgs e)
-        {
-
-          grdClase.Rows[index].Cell[1].Value = txtAlumno2.text;
-          grdClase.Rows[index].Cell[2].Value = txtProfesor2.text;
-          grdClase.Rows[index].Cell[3].Value = txtMateria2.text;
-        }
     }
 }
