@@ -35,9 +35,25 @@ namespace finalprogramacion1
           int index = Convert.ToInt32(txtIndexMod.Text);
           Form2 frmModif = new Form2(txtAlumno.Text, txtProfesor.Text, txtMateria.Text);
           frmModif.Show();
-          grdClase.Rows[index].Cells[1].Value = frmModif.txtAlumno2.Text;
-          grdClase.Rows[index].Cells[2].Value = frmModif.txtProfesor2.Text;
-          grdClase.Rows[index].Cells[3].Value = frmModif.txtMateria2.Text;
+          
+          string lineastr;
+          string path = ".modificartmp";
+          using (StreamReader sr = new StreamReader(path))
+          {
+            lineastr = sr.ReadLine();
+            sr.Close();
+          }
+          
+          if (File.Exists(path))
+          {
+            File.Delete(path);
+          }
+
+          var dato = lineastr.Split("|");
+
+          grdClase.Rows[index].Cells[1].Value = dato[0];
+          grdClase.Rows[index].Cells[2].Value = dato[1];
+          grdClase.Rows[index].Cells[3].Value = dato[2];
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
