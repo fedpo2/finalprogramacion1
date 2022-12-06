@@ -33,6 +33,10 @@
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.grdClase = new System.Windows.Forms.DataGridView();
+            this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtAlumno = new System.Windows.Forms.TextBox();
             this.txtMateria = new System.Windows.Forms.TextBox();
@@ -46,16 +50,18 @@
             this.lblMod = new System.Windows.Forms.Label();
             this.lblBaja = new System.Windows.Forms.Label();
             this.lblAlta = new System.Windows.Forms.Label();
-            this.index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtProfesorMod = new System.Windows.Forms.TextBox();
+            this.txtNombreMod = new System.Windows.Forms.TextBox();
+            this.txtMateriaMod = new System.Windows.Forms.TextBox();
+            this.lblMateriaMod = new System.Windows.Forms.Label();
+            this.lblProfesorMod = new System.Windows.Forms.Label();
+            this.lblAlumnoMod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdClase)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(483, 202);
+            this.btnModificar.Location = new System.Drawing.Point(483, 290);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 0;
@@ -107,6 +113,26 @@
             this.grdClase.Size = new System.Drawing.Size(443, 361);
             this.grdClase.TabIndex = 4;
             // 
+            // index
+            // 
+            this.index.HeaderText = "Index";
+            this.index.Name = "index";
+            // 
+            // alumno
+            // 
+            this.alumno.HeaderText = "Alumno";
+            this.alumno.Name = "alumno";
+            // 
+            // profesor
+            // 
+            this.profesor.HeaderText = "Profesor";
+            this.profesor.Name = "profesor";
+            // 
+            // materia
+            // 
+            this.materia.HeaderText = "Materia ";
+            this.materia.Name = "materia";
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(474, 347);
@@ -144,6 +170,7 @@
             this.txtIndexMod.Name = "txtIndexMod";
             this.txtIndexMod.Size = new System.Drawing.Size(100, 23);
             this.txtIndexMod.TabIndex = 12;
+            this.txtIndexMod.TextChanged += new System.EventHandler(this.txtIndexMod_TextChanged);
             // 
             // txtIndexBaja
             // 
@@ -215,31 +242,66 @@
             this.lblAlta.TabIndex = 24;
             this.lblAlta.Text = "Dar de Alta";
             // 
-            // index
+            // txtProfesorMod
             // 
-            this.index.HeaderText = "Index";
-            this.index.Name = "index";
+            this.txtProfesorMod.Location = new System.Drawing.Point(474, 232);
+            this.txtProfesorMod.Name = "txtProfesorMod";
+            this.txtProfesorMod.Size = new System.Drawing.Size(100, 23);
+            this.txtProfesorMod.TabIndex = 25;
             // 
-            // alumno
+            // txtNombreMod
             // 
-            this.alumno.HeaderText = "Alumno";
-            this.alumno.Name = "alumno";
+            this.txtNombreMod.Location = new System.Drawing.Point(474, 203);
+            this.txtNombreMod.Name = "txtNombreMod";
+            this.txtNombreMod.Size = new System.Drawing.Size(100, 23);
+            this.txtNombreMod.TabIndex = 26;
+            this.txtNombreMod.TextChanged += new System.EventHandler(this.txtNombreMod_TextChanged);
             // 
-            // profesor
+            // txtMateriaMod
             // 
-            this.profesor.HeaderText = "Profesor";
-            this.profesor.Name = "profesor";
+            this.txtMateriaMod.Location = new System.Drawing.Point(474, 261);
+            this.txtMateriaMod.Name = "txtMateriaMod";
+            this.txtMateriaMod.Size = new System.Drawing.Size(100, 23);
+            this.txtMateriaMod.TabIndex = 27;
             // 
-            // materia
+            // lblMateriaMod
             // 
-            this.materia.HeaderText = "Materia ";
-            this.materia.Name = "materia";
+            this.lblMateriaMod.AutoSize = true;
+            this.lblMateriaMod.Location = new System.Drawing.Point(580, 264);
+            this.lblMateriaMod.Name = "lblMateriaMod";
+            this.lblMateriaMod.Size = new System.Drawing.Size(47, 15);
+            this.lblMateriaMod.TabIndex = 28;
+            this.lblMateriaMod.Text = "Materia";
+            // 
+            // lblProfesorMod
+            // 
+            this.lblProfesorMod.AutoSize = true;
+            this.lblProfesorMod.Location = new System.Drawing.Point(580, 235);
+            this.lblProfesorMod.Name = "lblProfesorMod";
+            this.lblProfesorMod.Size = new System.Drawing.Size(51, 15);
+            this.lblProfesorMod.TabIndex = 29;
+            this.lblProfesorMod.Text = "Profesor";
+            // 
+            // lblAlumnoMod
+            // 
+            this.lblAlumnoMod.AutoSize = true;
+            this.lblAlumnoMod.Location = new System.Drawing.Point(580, 206);
+            this.lblAlumnoMod.Name = "lblAlumnoMod";
+            this.lblAlumnoMod.Size = new System.Drawing.Size(50, 15);
+            this.lblAlumnoMod.TabIndex = 30;
+            this.lblAlumnoMod.Text = "Alumno";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 377);
+            this.Controls.Add(this.lblAlumnoMod);
+            this.Controls.Add(this.lblProfesorMod);
+            this.Controls.Add(this.lblMateriaMod);
+            this.Controls.Add(this.txtMateriaMod);
+            this.Controls.Add(this.txtNombreMod);
+            this.Controls.Add(this.txtProfesorMod);
             this.Controls.Add(this.lblAlta);
             this.Controls.Add(this.lblBaja);
             this.Controls.Add(this.lblMod);
@@ -260,6 +322,7 @@
             this.Controls.Add(this.btnModificar);
             this.Name = "Form1";
             this.Text = "Proyecto Final Programacion1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdClase)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,5 +353,11 @@
         private Label lblBaja;
         private Label lblAlta;
         private DataGridViewTextBoxColumn index;
+        private TextBox txtProfesorMod;
+        private TextBox txtNombreMod;
+        private TextBox txtMateriaMod;
+        private Label lblMateriaMod;
+        private Label lblProfesorMod;
+        private Label lblAlumnoMod;
     }
 }
