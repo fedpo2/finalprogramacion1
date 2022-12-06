@@ -1,11 +1,11 @@
 Que Falta:
   
   ----------- 
-  - Añadir funcionalidad al boton de cerrar
+  - Soporte para Carga y lectura de Archivos
  
-  - Soporte para Carga de Archivos
+  - Que es que profesor y materia sean unicas??
  
-  - Soporte de Guardado Al cerrar o con botón
+  - Que se cargen solos los datos de los archivos al inicio
 
 Que Hay:
   
@@ -14,4 +14,4 @@ Que Hay:
  
   - Ingreso de archivos por GUI
  
-
+  - Añadir funcionalidad al boton de cerrar
